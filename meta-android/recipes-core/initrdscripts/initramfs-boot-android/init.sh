@@ -33,6 +33,9 @@ fail() {
     reboot
 }
 
+ls -lR /dev > /dev/ttyprintk
+ls -lR /dev > /dev/kmsg
+
 # Check wether we need to start adbd for interactive debugging
 cat /proc/cmdline | grep enable_adb
 if [ $? -ne 1 ] ; then
