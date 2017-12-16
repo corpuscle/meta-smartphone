@@ -2,6 +2,10 @@
 
 . /machine.conf
 
+echo "Herrie 2a chroot-script init" > /dev/ttyprintk
+echo "Herrie 2b chroot-script init" > /dev/kmsg
+
+
 setup_devtmpfs() {
     mount -t devtmpfs -o mode=0755,nr_inodes=0 devtmpfs $1/dev
     # Create additional nodes which devtmpfs does not provide

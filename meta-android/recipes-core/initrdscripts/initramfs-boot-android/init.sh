@@ -3,6 +3,9 @@
 . /machine.conf
 . /distro.conf
 
+echo "Herrie 1a initramfs-boot-android init" > /dev/ttyprintk
+echo "Herrie 1b initramfs-boot-android init" > /dev/kmsg
+
 setup_devtmpfs() {
     mount -t devtmpfs -o mode=0755,nr_inodes=0 devtmpfs $1/dev
     # Create additional nodes which devtmpfs does not provide
