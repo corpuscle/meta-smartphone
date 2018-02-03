@@ -17,7 +17,7 @@ TAGS_RAM_BASE = "0x00000100"
 inherit kernel_android
 
 SRC_URI = " \
-  git://github.com/Halium/android_kernel_oneplus_onyx.git;branch=cm-14.1 \
+  git://github.com/corpuscle/android_kernel_oneplus_onyx.git;branch=herrie \
 "
 S = "${WORKDIR}/git"
 
@@ -25,7 +25,7 @@ do_configure_prepend() {
     cp -v -f ${S}/arch/arm/configs/lineageos_onyx_defconfig ${WORKDIR}/defconfig
 }
 
-SRCREV = "b1a69fe454bc6d7f7f84ff52369c9ca56d6be3b7"
+SRCREV = "a1056db17763f8a104a0fbcd128f947c2483f447"
 
 KV = "3.4.0"
 PV = "${KV}+gitr${SRCPV}"
